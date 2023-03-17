@@ -1,0 +1,72 @@
+version: "3.1"
+nlu:
+- intent: cumprimento
+  examples: |
+    - hey
+    - olá
+    - oi
+    - boa tarde
+    - bom dia
+    - boa noite
+    - Salve
+    - oioi, bão?
+    - ola
+    - Boa tarde
+- intent: ped_donut
+  examples: |
+    - Gostaria de fazer um pedido.
+    - Quero encomendar alguns donuts.
+    - Você pode anotar o meu pedido, por favor?
+    - Quero fazer um pedido
+    - Quero pedir um café
+    - Quero pedir um donut
+    - Posso fazer um pedido?
+    - Me vê uma caixa de donuts
+    - me vê uma bebida
+- intent: desc_item
+  examples: |
+    - Quero 2 donuts de chocolate
+    - Quero 1 donuts homer
+    - 3 galak especial
+    - Me vê um recheado de nutella
+    - Gostaria por favor de fazer um pedido de 8 donuts de floresta negra
+    - 3 de ferrero rocher e 9 comuns
+    - Manda 2 de frutas vermelhas
+    - Quero um cappuccino e um donut simples
+- intent: status
+  examples: |
+    - Qual o status do meu pedido?
+    - Meu pedido ainda não chegou
+    - Quero saber a localização do meu pedido, ele ainda não chegou
+    - Onde está meu pedido?
+    - Ainda não recebi meu pedido
+    - Cadê meu donut?
+    - Pode me dizer, por favor, onde está minha bebida?
+    - Onde está o meu donut?
+    - Quando vai chegar a meu pedido?
+    - cade o meu café?
+- intent: n_pedido
+  examples: |
+    - O número do meu pedido é o [0001](num_pedido)
+    - Meu pedido é o [1045](num_pedido)
+    - O número é o [1945](num_pedido)
+    - Claro, o pedido é o [3569](num_pedido)
+    - N: [3473](num_pedido)
+    - [0002](num_pedido)
+    - Pedido numero: [2586](num_pedido)
+    - O pedido é [9666](num_pedido)
+    - o pedido é [0134](num_pedido)
+- intent: agradecimento
+  examples: |
+    - Obrigado!
+    - Valeu, bot
+    - Valeu
+    - Agradeço a ajuda.
+    - Desde já agradeço
+    - Vlw
+    - Muito obrigada pela sua ajuda
+    - Obg
+    - Mt obg
+- regex: num_pedido
+  examples: |
+    - \d{4}

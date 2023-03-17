@@ -1,0 +1,39 @@
+version: "3.1"
+
+stories:
+
+- story: Pedido de donut
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimento
+  - intent: ped_donut
+  - action: utter_ped_donut
+  - intent: desc_item
+  - action: utter_desc_item
+
+- story: Conferencia do pedido
+  steps:
+  - intent: status
+  - action: utter_status
+  - intent: id_pedido
+  - action: utter_n_pedido
+  
+
+- story: general
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimento
+  - intent: ped_donut
+  - action: utter_ped_donut
+  - intent: desc_item
+  - action: utter_desc_item
+  - intent: status
+  - action: utter_status
+  - intent: n_pedido
+  - action: utter_n_pedido
+
+- story: interactive_story_1
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimento
+  - intent: cumprimento

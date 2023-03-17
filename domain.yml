@@ -1,0 +1,39 @@
+version: '3.1'
+intents:
+- agradecimento
+- cumprimento
+- desc_item
+- n_pedido
+- ped_donut
+- status
+entities:
+- num_pedido
+slot:
+  pedido_ns: null
+  type: text
+  influence_conversation: false
+  mappings:
+  - type: from_entity
+    entity: num_pedido
+responses:
+  utter_cumprimento:
+  - text: Bem-vindo à Doces Sonhos!🍩 Como posso ajudá-lo?
+  utter_ped_donut:
+  - text: Okay, donutlover! E o que você gostaria de pedir?
+  utter_desc_item:
+  - text: Perfeito! Seu pedido já foi registrado no código 🍩🍩🍩🍩, para ser feito com muito carinho e logo será enviado para a sua casa. <3
+  utter_status:
+  - text: Mesmo? Sinto muito... Você pode me informar o código do pedido por favor?
+  utter_n_pedido:
+  - text: Seu pedido já está a caminho e logo chegará delicioso na sua casa.
+  utter_agradecimento:
+  - text: Obrigado pela sua preferência! Espero que goste dos produtos, assim como gostamos de atender você. Até a próxima! 🍩
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_cumprimento
+- utter_desc_item
+- utter_n_pedido
+- utter_ped_donut
+- utter_status
